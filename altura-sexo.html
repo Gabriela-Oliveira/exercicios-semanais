@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexo Idade</title>
+</head>
+
+<body>
+<!--
+   1º pegar 5 alturas e 5 sexos
+   2º imprimir quantos são masculinos e quantos são femininos
+   3º imprimir qual é a maior altura e de que sexo ela corresponde 
+-->
+
+    <script>
+
+         var feminino = [];
+         var masculino = [];
+        // var alturas = [];
+        var alturaF = 0;
+        var alturaM = 0;
+
+         for(i = 0; i < 5; i++){
+            var sexo = prompt("Digite um sexo - f ou m");
+            var altura = parseFloat(prompt("Digite a altura correspondente ao sexo anterior: "));
+
+                if(sexo.toLowerCase == 'f'){
+                    feminino.push(sexo);
+                        if(altura >= alturaF){
+                            alturaF = altura;
+                        }
+                }else if(sexo.toLowerCase == 'm'){
+                    masculino.push(sexo);
+                    if(altura >= alturaM){
+                            alturaM = altura;
+                        }
+                }
+         }
+
+         document.write('F = ' + feminino.length + '<br>');
+         document.write('M = ' + masculino.length + '<br>');
+
+         if(alturaM > alturaF){
+             document.write('A maior altura é de um homem que mede: ' + alturaM + ' m.');
+         }else if(alturaF > alturaM){
+            document.write('A maior altura é de uma mulher que mede: ' + alturaF + ' m.');
+         }else{
+            document.write('A maior altura informada é de um home e de uma mulher, visto que eles tem a mesma altura de ' + alturaF + ' m.')
+         }
+
+//         document.write('F = ' + feminino.length + '<br>');
+//         document.write('M = ' + masculino.length + '<br>');
+//         document.write('AF = ' + alturaF + '<br>');
+//         document.write('AM = ' + alturaM + '<br>');
+
+    </script>
+
+</body>
+</html>

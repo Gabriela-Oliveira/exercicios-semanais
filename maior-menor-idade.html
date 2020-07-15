@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior e menor de idade</title>
+</head>
+<body>
+
+<!--
+    1º ver com o usuário quantas pessoas iremos pegar a idade
+    2º pergar as idades de acordo com a quantidade de pessoas adicionando as 
+    menores em um array e as maiores em outro
+    3º exibir a quantidade que existe em cada array
+-->
+    
+   
+    <script>
+
+        var quantidade = parseInt(prompt('De quantas pessoas pegaremos a idade para a análise?'));
+        var maior = [];
+        var menor = [];
+
+        for(i = 0; i < quantidade; i++){
+            var idade = parseInt(prompt('Digite uma idade: '));
+                if(idade >= 18){
+                    maior.push(idade);
+                }else{
+                    menor.push(idade);
+                }
+        }
+
+        document.write(maior.length + ' pessoas são maiores de idade!' + '<br>')
+        document.write(menor.length + ' pessoas são menores de idade!') 
+
+    </script>
+    
+</body>
+</html>
